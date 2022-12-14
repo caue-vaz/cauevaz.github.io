@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descubra sua nacionalidade:</h1>
+    Qual país voce nasceu? <input type="text" name="txtn" id="txtn">
+    <input type="button" value="Descobrir" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+            var n=document. getElementById('txtn')
+            var r= document.querySelector('div#res')
+            var na= String(n.value)
+            r.innerHTML=`Você nasceu em ${na}.`
+            if(na == "brasil",'brasil','Br','br'){
+                r.innerHTML +='Você é brasileiro.'
+            }else{
+                r.innerHTML +='Você é estrangeiro.'
+            }
+        }
+    </script>
+</body>
+</html>
